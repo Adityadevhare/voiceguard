@@ -1,0 +1,23 @@
+// use prisma-next
+
+model User {
+  id           Int                 @id @default(autoincrement())
+  name         String?
+  email        String              @unique
+  passwordHash String
+  createdAt    TimestamptzString   @default(now())
+  detections   Detection[]
+}
+
+model Detection {
+  id             Int               @id @default(autoincrement())
+  userId         Int
+  timestamp      TimestamptzString @default(now())
+  result         String
+  riskLevel      String
+  modelVersion   String?
+  processingTime Int?
+  metadata       Json?
+
+  user User @relation(fields: [userId], references: [id])
+}
