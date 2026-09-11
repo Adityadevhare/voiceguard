@@ -59,7 +59,7 @@ export function AppShell({ route, onNavigate, children }: AppShellProps) {
             className="group flex items-center gap-2.5 rounded-xl p-1 transition-opacity hover:opacity-90"
             aria-label="Go to overview"
           >
-            <span className="relative grid h-8 w-8 place-items-center rounded-[11px] bg-gradient-to-b from-primary/85 to-primary/60 text-primary-fg shadow-[0_0_0_1px_rgba(126,160,255,0.25),0_6px_18px_-6px_var(--primary)]">
+            <span className="relative grid h-8 w-8 place-items-center rounded-[11px] bg-gradient-to-b from-primary/85 to-primary/60 text-primary-fg shadow-[0_0_0_1px_rgba(126,160,255,0.15),0_6px_18px_-6px_var(--primary)]">
               <AudioWave className="h-4 w-4" />
             </span>
             <span className="text-[15px] font-semibold tracking-tight text-ink">
