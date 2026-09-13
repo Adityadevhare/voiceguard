@@ -1,0 +1,23 @@
+# Python environments
+.venv/
+aasist-venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# ML model weights / checkpoints
+models/
+*.onnx
+*.pt
+*.pth
+
+# Local audio recordings / test files
+Recording.m4a
+test.wav
+
+# Local installation/debug logs
+fairseq-install.log
+
+# Cloned reference repository
+SSL_Anti-spoofing/
