@@ -17,14 +17,12 @@ export class PythonMlDetectionEngine implements DetectionEngine {
 
   async detect(input: DetectionInput): Promise<DetectionResult> {
     const prediction = await this.client.predict(input);
-    const profile = VERDICT_PROFILES[prediction.result];
+    const profile = VERDICT_PROFILES[prediction.status];
     return {
-      result: prediction.result,
+      result: prediction.status,
       riskLevel: profile.riskLevel,
       message: profile.message,
-      ...(prediction.modelVersion !== undefined
-        ? { modelVersion: prediction.modelVersion }
-        : {}),
+      modelVersion: prediction.model,
     };
   }
 }

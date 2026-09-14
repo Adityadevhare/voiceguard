@@ -15,12 +15,12 @@ const CONTENT: Record<VoiceStatus, VoiceStatusContent> = {
   uncertain: {
     label: "We're not completely sure",
     message: "We're not completely sure",
-    detail: "Some characteristics of the voice are unusual.",
+    detail: "Some characteristics of the voice seem unusual.",
   },
   suspicious: {
     label: "This voice seems suspicious",
     message: "This voice seems suspicious",
-    detail: "We noticed characteristics that may indicate an AI-generated voice.",
+    detail: "We noticed strong signs that the voice may be AI-generated.",
   },
   ai: {
     label: "This voice is very likely AI-generated",

@@ -69,7 +69,7 @@ class W2V2AASIST:
         logits = outputs[0][0]
 
         return {
-            "logit_0": float(logits[0]),
-            "logit_1": float(logits[1]),
-            "inference_time_ms": round(elapsed_ms, 2),
+            "logit0": float(logits[0]),
+            "logit1": float(logits[1]),
+            "inferenceTimeMs": round(elapsed_ms, 2),
         }

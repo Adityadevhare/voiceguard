@@ -49,11 +49,19 @@ async def predict(audio: UploadFile = File(...)):
 
         result = model.predict_file(temp_path)
 
+        logit0 = result["logit0"]
+        logit1 = result["logit1"]
+        classification = "bonafide" if logit1 > logit0 else "spoof"
+
         return {
             "success": True,
-            "filename": audio.filename,
             "model": "W2V2-AASIST",
-            "result": result,
+            "result": {
+                "classification": classification,
+                "logit0": logit0,
+                "logit1": logit1,
+                "inferenceTimeMs": result["inferenceTimeMs"],
+            },
         }
 
     finally:
