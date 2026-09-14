@@ -12,6 +12,9 @@ models/
 *.pt
 *.pth
 
+# Verification artifacts (generated)
+training/artifacts/
+
 # Local audio recordings / test files
 Recording.m4a
 test.wav
